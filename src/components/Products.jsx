@@ -22,7 +22,7 @@ const Products = () => {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("http://3.82.106.238:8000/api/products/");
+      const response = await fetch("https://artmart.hassamj.com/api/products/");
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());

@@ -24,12 +24,12 @@ const Product = () => {
     const getProduct = async () => {
       setLoading(true);
       setLoading2(true);
-      const response = await fetch(`http://3.82.106.238:8000/api/products/${id}`);
+      const response = await fetch(`https://artmart.hassamj.com/api/products/${id}`);
       const data = await response.json();
       setProduct(data);
       setLoading(false);
       const response2 = await fetch(
-        `http://3.82.106.238:8000/api/products/category/${data.category}`
+        `https://artmart.hassamj.com/api/products/category/${data.category}`
       );
       const data2 = await response2.json();
       setSimilarProducts(data2);
